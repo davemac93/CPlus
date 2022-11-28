@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+double fromAuticalMilestoMeters(double);
+
+int main()
+{
+    double miles;
+    cout << "Enter number of autical miles:";
+    cin >> miles; 
+    cout << miles << " autical miles is " << fromAuticalMilestoMeters(miles) << " meters";
+}
+
+double fromAuticalMilestoMeters(double miles) {
+    return miles * 1852;
+}
