@@ -1,0 +1,18 @@
+
+#include <iostream>
+
+using namespace std;
+
+int yearToMonths(int);
+
+int main()
+{
+	int years;
+	cout << "Enter your age in years:";
+	cin >> years;
+	cout << "Your age in motnhs is " << yearToMonths(years);
+}
+
+int yearToMonths(int years) {
+	return years * 12;
+}
