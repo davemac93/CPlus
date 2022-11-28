@@ -1,0 +1,10 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Name of the Author: Stephen Prata" << endl;
+    cout << "Living on adress: 513 Stone Dr, Novato, CA 94947" << endl;
+}
