@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void entliczek();
+void stoliczek();
+
+int main()
+{
+    for (int i = 0; i < 2; i++)
+        entliczek();
+    for (int i = 0; i < 2; i++)
+        stoliczek();
+}
+
+
+void entliczek() {
+    cout << "Entliczek pentliczek" << endl;
+}
+void stoliczek() {
+    cout << "Czerwony stoliczek" << endl;
+}
