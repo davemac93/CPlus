@@ -1,0 +1,48 @@
+#include <iostream>
+
+const double convertionToMeters = 0.0254;
+
+using namespace std;
+
+int feetsToInches(const int,const int);
+double fromInchesToMeters(const int);
+double fromFuntsToKG(const int);
+double BMI(const double, const double);
+
+
+int main(int argc, const char * argv[]) {
+    
+    int feet, inches, weight;
+    cout << "Enter your hegiht in feets and inches" << endl;
+    cout << "Feets:";
+    cin >> feet;
+    cout << "Inches:";
+    cin >> inches;
+    cout << "Enter your weight in funts:";
+    cin >> weight;
+    cout << "Your BMI with: " << fromInchesToMeters(feetsToInches(feet, inches)) << " m and " << fromFuntsToKG(weight) << " kg is: " << BMI(fromInchesToMeters(feetsToInches(feet, inches)),fromFuntsToKG(weight));
+    
+    return 0;
+}
+
+int feetsToInches(const int feets,const int inches){
+    int inches1;
+    inches1 = inches + (feets*12);
+    return inches1;
+}
+
+double fromInchesToMeters(const int inches){
+    double meters;
+    meters = inches * convertionToMeters;
+    return meters;
+}
+
+double fromFuntsToKG(const int funt){
+    double kg;
+    kg = funt / 2.2;
+    return kg;
+}
+double BMI(const double meters, const double kg){
+    return kg/(meters*meters);
+}
+
