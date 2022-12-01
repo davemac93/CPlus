@@ -1,0 +1,33 @@
+#include <iostream>
+
+const double Norms = 5.5;
+
+void euroNorms(double, int);
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    int km;
+    double liters;
+    cout << "Enter amount of km:";
+    cin >> km;
+    cout << "Enter amount of liter your car consumed:";
+    cin >> liters;
+    euroNorms(liters, km);
+    
+
+    return 0;
+}
+
+void euroNorms(double liter, int km){
+    double literPerHundret = liter*100/km;
+    cout << "Your consumption is " << literPerHundret << "L/100km" << endl;
+    if(literPerHundret<=Norms){
+        cout << "Your car has good emition" <<endl;
+    }
+    else{
+        cout <<"Your car has high emition" << endl;
+    }
+    
+}
