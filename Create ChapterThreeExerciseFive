@@ -1,0 +1,25 @@
+#include <iostream>
+
+long double comperPopulation(long long, long long);
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    long long worldPopulation;
+    long long yourContryPopulation;
+    
+    cout << "Enter world people population:";
+    cin >> worldPopulation;
+    cout << "Enter your contry population:";
+    cin >> yourContryPopulation;
+    
+    
+    cout << "Your country population is " << comperPopulation(worldPopulation, yourContryPopulation) << "% of world population" <<endl;
+
+    return 0;
+}
+
+long double comperPopulation(long long world, long long your){
+    return (long double)your*100/(long double)world;
+}
