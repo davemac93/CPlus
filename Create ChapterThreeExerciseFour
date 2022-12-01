@@ -1,0 +1,18 @@
+#include <iostream>
+
+const int toMin = 60;
+const int toHours = 60;
+const int toDays = 24;
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    long long sec;
+    cout << "Enter the value in seconds:";
+    cin >> sec;
+    cout << sec << " seconds = " << sec/toMin/toHours/toDays << " days " << sec/toMin/toHours%toDays << " hours " << sec/toMin%toHours << " minutes " << sec%toMin << " seconds";
+    
+
+    return 0;
+}
