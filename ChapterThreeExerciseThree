@@ -1,0 +1,22 @@
+#include <iostream>
+
+#define CONVERT 60
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    double feets, min, sec;
+    cout << "Enter longitude in feets, minutes and seconds!"<< endl;
+    cout << "Enter value in feets:";
+    cin >> feets;
+    cout << "Enter value in minutes:";
+    cin >>min;
+    cout << "ENter value in seconds";
+    cin >>sec;
+    
+    cout << feets << " feets " << min << " minutes " << sec << "sedounds = " <<feets+(min+(sec/CONVERT))/CONVERT;
+    
+
+    return 0;
+}
