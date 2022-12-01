@@ -1,0 +1,21 @@
+#include <iostream>
+
+const double convertion = 0.3937;
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    int cm,feet;
+    double inches;
+    cout << "Enter the height in cm:";
+    cin >> cm;
+    
+    inches = cm*convertion;
+    feet = inches / 12;
+    inches = int(inches) % 12;
+    
+    cout << cm << "cm is " << feet << " feets and " << inches << " inches";
+    
+    return 0;
+}
