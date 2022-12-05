@@ -1,0 +1,24 @@
+#include <iostream>
+
+const double converKMToMiles = 0.6214;
+const double converLToGallons = 0.2641720524;
+
+double convertToGallonPerMiles(double);
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    double liters;
+    cout << "Enter petrol consuption in liter per 100km:";
+    cin >> liters;
+    
+    cout << "Gallo Per Miles:" << convertToGallonPerMiles(liters) << endl;
+    
+
+    return 0;
+}
+
+double convertToGallonPerMiles(double liters){
+    return 100*converKMToMiles/(liters*converLToGallons);
+}
