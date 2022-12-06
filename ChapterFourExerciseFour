@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
+int main()
+{   
+    
+    string name; 
+    string lastname; 
+    cout << "Enter your name:";
+    getline(cin, name);
+    cout << "Enter your lastname:";
+    getline(cin, lastname);
+    string merge = name;
+    merge = merge + ", ";
+    merge += lastname;
+    cout << "Her is information merge to one writing: " << merge; 
+    
+
+    return 0;
+}
