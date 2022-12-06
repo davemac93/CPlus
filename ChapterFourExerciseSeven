@@ -14,11 +14,12 @@ int main()
 {   
     int size;
     cout << "How many pizzas do you want to add:";
-    cin >> size; 
+    cin >> size;
+    cin.get();
     Pizza arr[size];
     for (int i = 0; i<size; ++i){
         cout << "Enter name of the company:";
-        cin >> arr[i].companyName;
+        getline(cin, arr[i].companyName);
         cout << "Enter diameter of pizza:";
         cin >> arr[i].diameter;
         cout << "Enter weight of pizza:";
