@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
+int main()
+{   
+    int ArSize = 50;
+    char name[ArSize];
+    char lastname[ArSize];
+    cout << "Enter your name:";
+    cin.getline(name, ArSize);
+    cout << "Enter your lastname:";
+    cin.getline(lastname, ArSize);
+    char merge[strlen(name)+strlen(lastname)+2];
+    strcpy(merge, name);
+    strcat(merge, ", ");
+    strcat(merge, lastname);
+    cout << "Her is information merge to one writing: " << merge; 
+    
+
+    return 0;
+}
