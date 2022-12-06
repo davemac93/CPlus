@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
+struct CandyBar {
+    string companyName; 
+    double weight; 
+    double price; 
+};
+
+int main()
+{   
+    CandyBar snack{"Snikers", 2.56, 7.99};
+    cout << "Snack information:" << endl;
+    cout << "Comapny name: " << snack.companyName << endl;
+    cout << "Snack weight: " << snack.weight << endl;
+    cout << "Snack price EUR: " << snack.price << endl;
+   
+
+    return 0;
+}
