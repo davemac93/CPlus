@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+
+struct Pizza {
+    string companyName; 
+    int diameter; 
+    double weight; 
+};
+
+int main()
+{   
+    int size;
+    cout << "How many pizzas do you want to add:";
+    cin >> size;
+    Pizza *arr = new Pizza[size];
+    for (int i = 0; i<size; ++i){
+        cout << "Enter diameter of pizza:";
+        cin >> arr[i].diameter;
+        cin.get();
+        cout << "Enter name of the company:";
+        getline(cin, arr[i].companyName);
+        cout << "Enter weight of pizza:";
+        cin >> arr[i].weight;
+    }
+    
+    for (int i=0; i<size; ++i){
+        cout << "Pizza " << i+1 << ":" << endl;
+        cout << "Company name: " << arr[i].companyName << endl;
+        cout << "Pizza's diameter: " << arr[i].diameter << endl; 
+        cout << "Pizza's weight: " << arr[i].weight << endl; 
+    }   
+    
+    delete []arr;
+   
+    return 0;
+}
