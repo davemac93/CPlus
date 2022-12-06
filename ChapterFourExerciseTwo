@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    int age, grade;
+    string name; 
+    string lastname;
+    cout << "Enter your name:";
+    getline(cin, name);
+    cout << "Enter your lastname:";
+    getline(cin, lastname);
+    cout << "What grade do you deserve:";
+    cin >> grade; 
+    cout << "Enter your age:";
+    cin >> age; 
+    cout << "Name:" << name << ", " << lastname << endl;
+    cout << "Grade:" << grade-1 << endl;
+    cout << "Age:" << age << endl;
+    
+
+    return 0;
+}
