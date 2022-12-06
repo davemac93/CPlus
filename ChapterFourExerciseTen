@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <array> 
+
+using namespace std;
+
+const int size = 3;
+
+double averageTime(array<int, size>& arr);
+void printArray(array<int, size>& arr);
+void printTime(int a);
+
+int main()
+{   
+    array<int,size> sprintTime;
+    
+    for (int i=0; i<size; ++i){
+        cout << "Enter time for " << i+1 << " sprint in secunds:";
+        cin >> sprintTime[i];
+    }
+    printArray(sprintTime);
+    
+    return 0;
+}
+
+double averageTime(array<int, size>& arr){
+    double sum;
+    for(int i=0; i<size; i++)
+        sum+= arr[i];
+    return sum/size;
+}
+void printArray(array<int, size>& arr){
+    for(int i=0; i<size; i++){
+        cout << i+1 << " Sprint time:";
+        printTime(arr[i]);
+        cout << " averege time is: ";
+        printTime((int)averageTime(arr));
+        cout << endl;
+    }
+}
+
+void printTime(int a){
+    cout << a/3600 << ":" <<  a/60%60 << ":" << a%60;
+}
