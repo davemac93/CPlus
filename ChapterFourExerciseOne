@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    const int ArSize = 50;
+    int age, grade;
+    char name[ArSize]; 
+    char lastname[Arsize];
+    cout << "Enter your name:";
+    cin.getline(name, ArSize);
+    cout << "Enter your lastname:";
+    cin.getline(lastname, ArSize);
+    cout << "What grade do you deserve:";
+    cin >> grade; 
+    cout << "Enter your age:";
+    cin >> age; 
+    cout << "Name:" << name << ", " << lastname << endl;
+    cout << "Grade:" << grade-1 << endl;
+    cout << "Age:" << age << endl;
+    
+
+    return 0;
+}
