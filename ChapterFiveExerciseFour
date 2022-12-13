@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+const double capital = 100;
+
+double Dagfe(int);
+double Cleo(int);
+
+int main(int argc, const char * argv[]) {
+    int i = 1;
+    while(Dagfe(i)>Cleo(i))
+        i++;
+    cout << "Investments after " << i << " years" << endl;
+    cout << "Dagfe: " << Dagfe(i) << endl;
+    cout << "Cleo: " << Cleo(i) << endl;
+
+   
+    return 0;
+}
+
+double Dagfe(int years){
+    return ((capital*0.10)*years)+capital;
+}
+double Cleo(int years){
+    double capitalCleo = capital;
+    for (int i=1; i<=years; ++i)
+        capitalCleo = capitalCleo * 1.05;
+    return capitalCleo;
+}
