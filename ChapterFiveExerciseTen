@@ -1,0 +1,20 @@
+#include <iostream>
+#include<array>
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    int numer;
+    cout << "Enter numer of lines:";
+    cin >> numer;
+    for (int i=0; i<numer; i++){
+        for (int j=numer; j>0; j--){
+            if(j>=i+2)
+                cout << ".";
+            else
+                cout << "*";
+        }
+        cout << endl;
+    }
+    
+}
