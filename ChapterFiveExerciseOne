@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int sum(int, int);
+
+int main(int argc, const char * argv[]) {
+    int x,y;
+    cout << "Enter to numbers one by one:";
+    cin >> x >> y;
+    cout << "Sum of range " << x << " to " << y << " is " << sum(x,y) << endl;
+    
+    return 0;
+}
+
+int sum(int first, int last){
+    int sumary = 0;
+    for (int i=first; i<=last; i++){
+        sumary += i;
+    }
+    return sumary;
+}
