@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    int number;
+    int sum = 0;
+    do{
+        cout << "Enter the number(to end enter 0):";
+        cin >> number;
+        sum += number;
+        cout << "Sum: " << sum << endl;
+    }while(number!=0);
+    return 0;
+}
