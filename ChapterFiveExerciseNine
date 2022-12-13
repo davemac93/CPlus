@@ -1,0 +1,27 @@
+#include <iostream>
+#include<array>
+
+using namespace std;
+
+struct car{
+    char brand[20];
+    int yearOfProduction;
+};
+
+int main(int argc, const char * argv[]) {
+    int amount;
+    cout << "How many cars you want to add:";
+    cin >> amount;
+    car *temp = new car[amount];
+    for (int i=0; i<amount; i++){
+        cin.get();
+        cout << "Enter car brand:";
+        cin.getline(temp[i].brand, 20);
+        cout << "Enter the year of production:";
+        cin >> temp[i].yearOfProduction;
+    }
+    for (int i=0; i<amount; i++)
+        cout << temp[i].yearOfProduction << " " << temp[i].brand << endl;
+
+    return 0;
+}
