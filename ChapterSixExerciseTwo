@@ -1,0 +1,43 @@
+#include <iostream>
+#include <array>
+#include <cctype>
+
+const int SIZE = 10;
+
+using namespace std;
+
+void setArray(double *arr);
+double average(double *arr);
+void showBigger(double *arr);
+
+int main(int argc, const char * argv[]) {
+    double *arr = new double[SIZE];
+    setArray(arr);
+    cout << "Average of array is: " <<average(arr) << endl;
+    showBigger(arr);
+    return 0;
+    
+    delete []arr;
+}
+
+void setArray(double *arr){
+    cout << "Arr[1]=";
+    for (int i=1; i < SIZE && cin >> arr[i]; i++){
+        cout << "Arr[" << i+1 << "]=";
+    }
+}
+
+double average(double *arr){
+    double sum = 0;
+    for (int i = 0; i<SIZE; i++){
+        sum += arr[i];
+    }
+    return sum/10;
+}
+
+void showBigger(double *arr){
+    for (int i = 0; i<SIZE; i++){
+        if(arr[i]>average(arr))
+            cout << "Arr[" << i+1 << "]=" << arr[i] << endl;
+    }
+}
