@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+double tax(double);
+int main(int argc, const char * argv[]) {
+    
+    double amount;
+
+    do{
+        cout << "Enter amount:";
+        cin >> amount;
+        if (amount < 0 || amount < round_toward_infinity)
+            break;
+        cout << "Tax:" << tax(amount) << endl;
+    }while(true);
+    
+    return 0;
+}
+
+double tax(double income){
+    if(income<=5000)
+        return income*0.00;
+    else if(income>5000 && income <=10000)
+        return 5000*0.00+(income-5000)*0.10;
+    else if(income>10000 && income <=20000)
+        return 5000*0.00+10000*0.10+(income-5000-10000)*0.10;
+    else
+        return 5000*0.00+10000*0.10+20000*0.15+(income-5000-10000-20000)*0.10;
+}
