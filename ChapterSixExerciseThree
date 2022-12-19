@@ -1,0 +1,29 @@
+#include <iostream>
+#include <array>
+#include <cctype>
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    char ch;
+    do{
+        cout << "Chose between a,b,c,d:";
+        cin >> ch;
+    }while(ch != 'a' && ch != 'b' && ch != 'c' && ch != 'd');
+    
+    switch(ch){
+        case 'a':
+            cout << "You have luck" << endl;
+            break;
+        case 'b':
+            cout << "You got fucked" << endl;
+            break;
+        case 'c':
+            cout << "You are fun" << endl;
+            break;
+        case 'd':
+            cout << "You are stock" << endl;
+            break;
+    }
+    return 0;
+}
