@@ -1,0 +1,79 @@
+#include <iostream>
+
+const int strsize = 50;
+
+using namespace std;
+
+struct zpdw{
+    char imie[strsize];
+    char stanowisko[strsize];
+    char pseudonim[strsize];
+    int preferencje;
+};
+
+int main(int argc, const char * argv[]) {
+    
+    zpdw arr[5];
+    arr[0].preferencje = 1;
+    strcpy(arr[0].imie, "Wimp Macho");
+    strcpy(arr[0].stanowisko, "Developer");
+    strcpy(arr[0].pseudonim, "Fast");
+    arr[1].preferencje = 2;
+    strcpy(arr[1].imie, "Raki Rhodes");
+    strcpy(arr[1].stanowisko, "Junior Developer");
+    strcpy(arr[1].pseudonim, "Loki");
+    arr[2].preferencje = 3;
+    strcpy(arr[2].imie, "Celia Laiter");
+    strcpy(arr[2].stanowisko, "Full Stack Developer");
+    strcpy(arr[2].pseudonim, "MIPS");
+    arr[3].preferencje = 2;
+    strcpy(arr[3].imie, "Hoppy Hipman");
+    strcpy(arr[3].stanowisko, "Analitic");
+    strcpy(arr[3].pseudonim, "Thor");
+    arr[4].preferencje = 1;
+    strcpy(arr[4].imie, "Pat Hand");
+    strcpy(arr[4].stanowisko, "Blockchain ");
+    strcpy(arr[4].pseudonim, "LOOPY");
+    char choose;
+
+    do{
+        cout << "a. print by name" << endl;
+        cout << "b. print by position" << endl;
+        cout << "c. print by psudonim" << endl;
+        cout << "d. print by preferences" << endl;
+        cout << "q. quit" << endl;
+        cin >> choose;
+        switch(choose){
+            case 'a':
+                for (int i=0; i<5; i++)
+                    cout << arr[i].imie << endl;
+                break;
+            case 'b':
+                for (int i=0; i<5; i++)
+                    cout << arr[i].stanowisko << endl;
+                break;
+            case 'c':
+                for (int i=0; i<5; i++)
+                    cout << arr[i].pseudonim << endl;
+                break;
+            case 'd':
+                for (int i=0; i<5; i++){
+                    if(arr[i].preferencje==1)
+                        cout << arr[i].imie << endl;
+                    else if(arr[i].preferencje==2)
+                        cout << arr[i].stanowisko << endl;
+                    else
+                        cout << arr[i].pseudonim << endl;
+                }
+                break;
+            case 'q':
+                break;
+            default:
+                cout << "Choose is wrong" << endl;
+        }
+    }while(choose!='q');
+
+
+    
+    return 0;
+}
