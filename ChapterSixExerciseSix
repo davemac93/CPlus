@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+
+struct sponspors{
+    string name;
+    double amount;
+};
+
+void fillIn(sponspors [], int size);
+void print(sponspors [], int size);
+
+
+int main(int argc, const char * argv[]) {
+    int size;
+    cout<< "How many sponsors you want to add:";
+    cin >> size;
+    sponspors *arr = new sponspors[size];
+    fillIn(arr, size);
+    print(arr, size);
+    
+    
+   
+}
+
+void fillIn(sponspors a[], int size){
+    for(int i=0;i<size;i++){
+        cin.get();
+        cout<<"Enter name of the sponsor:";
+        getline(cin, a[i].name);
+        cout << "Enter the amount:";
+        cin >> a[i].amount;
+    }
+}
+
+void print(sponspors a[], int size){
+    cout << "Our greate sponsors:" << endl;
+    for (int i=0; i<size; i++){
+        if (a[i].amount>=10000)
+            if (a[i].name.empty())
+                cout << "name missing donation: " << a[i].amount << endl;
+            else
+                cout << a[i].name << " donation: " << a[i].amount << endl;
+            
+    }
+    cout << "Our sponsors:" << endl;
+    for (int i=0; i<size; i++){
+        if (a[i].amount<10000)
+            if (a[i].name.empty())
+                cout << "name missing donation: " << a[i].amount << endl;
+            else
+                cout << a[i].name << " donation: " << a[i].amount << endl;
+    }
+}
